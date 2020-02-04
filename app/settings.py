@@ -52,6 +52,8 @@ ROOT_URLCONF = 'app.urls'
 
 CORS_ORIGIN_WHITELIST = [
     "http://www.greatsoft.uz/",
+    "http://localhost:8080",
+    "http://127.0.0.1:8000"
 ]
 
 TEMPLATES = [
