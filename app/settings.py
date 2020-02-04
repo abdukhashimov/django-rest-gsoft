@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # thirdparty
     'rest_framework',
+    'corsheaders',
     # custom apps
     'order.apps.OrderConfig',
 ]
@@ -37,6 +38,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -47,6 +49,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'app.urls'
+
+CORS_ORIGIN_WHITELIST = [
+    "http://www.greatsoft.uz/",
+]
 
 TEMPLATES = [
     {
