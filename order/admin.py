@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from order.models import BaseContact, Order
+
+admin.site.register(BaseContact)
+admin.site.register(Order)
